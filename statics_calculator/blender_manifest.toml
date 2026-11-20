@@ -1,0 +1,14 @@
+# This file was generated with the assistance of an AI coding tool.
+schema_version = "1.0.0"
+id = "statics_calculator"
+version = "0.0.1"
+name = "Statics Calculator"
+tagline = "Hand-calculation statics on Bonsai's structural analysis models"
+maintainer = "Ryan Schultz <ryan@openingdesign.com>"
+type = "add-on"
+website = "https://github.com/OpeningDesign/statics-calculator"
+tags = ["Object", "Scene", "User Interface"]
+# As Bonsai's lowest supported Blender; this extension is pure Python.
+blender_version_min = "4.5.0"
+license = ["SPDX:GPL-3.0-or-later"]
+permissions.files = "Write calculation reports to disk"
