@@ -14,8 +14,9 @@ models for a solver.
 **Status: a home being prepared.** The calculator still lives in Bonsai, on
 [brunopostle/IfcOpenShell `structural-statics-calculator`](https://github.com/brunopostle/IfcOpenShell/tree/structural-statics-calculator).
 It moves here piece by piece, each piece with the small extension point in Bonsai it needs, as agreed in
-[IfcOpenShell #9866](https://github.com/IfcOpenShell/IfcOpenShell/issues/9866). Until then this extension does
-nothing but check that Bonsai is there.
+[IfcOpenShell #9866](https://github.com/IfcOpenShell/IfcOpenShell/issues/9866). The first piece here draws point
+forces added by the parallelogram law or tip to tail, with their angles, through a hook in Bonsai: see
+[docs/point-force-drawer.md](docs/point-force-drawer.md).
 
 ## What goes here and what goes in Bonsai
 
@@ -36,7 +37,16 @@ it. It is documented in [docs/property-set.md](docs/property-set.md).
 Not yet packaged. It needs Bonsai installed and enabled first: Blender's extension format cannot declare that,
 so enabling this extension without Bonsai stops with a message saying so.
 
+## Development
+
+`blender --python dev/launch.py` registers the extension from this repo for one Blender session, without
+installing it or changing your add-ons.
+
 ## Tests
+
+`blender -b --python tests/run_in_blender.py` runs this repo's tests headless, with Bonsai enabled from your
+preferences.
+
 
 - **Public checks:** small models with hand-worked answers, in
   [Community_Troubleshooting](https://hub.openingdesign.com/OSArch/Community_Troubleshooting/src/branch/main/9866_Structural%20Analysis/checks).
